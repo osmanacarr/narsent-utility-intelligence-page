@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,6 +16,18 @@ const ContactPage = () => {
     consent: false
   });
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Scroll to contact form if coming from a CTA
+    const timer = setTimeout(() => {
+      const el = document.getElementById("contact-form");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -94,7 +106,7 @@ const ContactPage = () => {
 
             {/* Contact Form */}
             <div className="animate-fade-in" style={{ animationDelay: "400ms" }}>
-              <div className="bg-white rounded-2xl shadow-xl p-8">
+              <div className="bg-white rounded-2xl shadow-xl p-8" id="contact-form">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Start a Conversation</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -180,6 +192,7 @@ const ContactPage = () => {
                   <Button
                     type="submit"
                     className="w-full bg-primary hover:bg-blue-600 text-white py-3 rounded-lg font-medium transition-colors"
+                    aria-label="Send message"
                   >
                     Send Message
                   </Button>

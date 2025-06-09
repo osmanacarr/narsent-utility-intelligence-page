@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Brain, Database, Zap, Users, Shield, Settings, BarChart3, Workflow } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
+import { Link } from "react-router-dom";
 
 const ProductOverview = () => {
   const modules = [
@@ -80,10 +81,6 @@ const ProductOverview = () => {
     }
   };
 
-  const handleCTAClick = () => {
-    console.log("See it in action clicked");
-  };
-
   return (
     <PageLayout>
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -146,12 +143,14 @@ const ProductOverview = () => {
                 Schedule a technical walkthrough with our R&D team and explore how these modules 
                 can be configured for your specific use case.
               </p>
-              <Button
-                onClick={handleCTAClick}
-                className="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-colors"
-              >
-                See It in Action
-              </Button>
+              <Link to="/contact">
+                <Button
+                  className="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+                  aria-label="See it in action"
+                >
+                  See It in Action
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

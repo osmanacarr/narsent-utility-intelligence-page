@@ -8,10 +8,6 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const handleCTA = () => {
-    console.log("Request Demo clicked");
-  };
-
   const handleNavClick = (section: string) => {
     console.log(`Navigation clicked: ${section}`);
     setIsMenuOpen(false);
@@ -42,6 +38,7 @@ const Header = () => {
               className={`text-gray-700 hover:text-primary transition-colors font-medium ${
                 isActive("/product") ? "text-primary" : ""
               }`}
+              aria-label="View product overview"
             >
               Product
             </Link>
@@ -51,6 +48,7 @@ const Header = () => {
               className={`text-gray-700 hover:text-primary transition-colors font-medium ${
                 isActive("/how-it-works") ? "text-primary" : ""
               }`}
+              aria-label="Learn how it works"
             >
               How It Works
             </Link>
@@ -60,6 +58,7 @@ const Header = () => {
               className={`text-gray-700 hover:text-primary transition-colors font-medium ${
                 isActive("/pricing") ? "text-primary" : ""
               }`}
+              aria-label="View pricing"
             >
               Pricing
             </Link>
@@ -69,6 +68,7 @@ const Header = () => {
               className={`text-gray-700 hover:text-primary transition-colors font-medium ${
                 isActive("/contact") ? "text-primary" : ""
               }`}
+              aria-label="Contact us"
             >
               Contact
             </Link>
@@ -76,12 +76,14 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button
-              onClick={handleCTA}
-              className="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-            >
-              Request Demo
-            </Button>
+            <Link to="/contact">
+              <Button
+                className="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                aria-label="Request demo"
+              >
+                Request Demo
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -103,6 +105,7 @@ const Header = () => {
                 to="/product"
                 onClick={() => handleNavClick("Product")}
                 className="text-gray-700 hover:text-primary transition-colors font-medium text-left"
+                aria-label="View product overview"
               >
                 Product
               </Link>
@@ -110,6 +113,7 @@ const Header = () => {
                 to="/how-it-works"
                 onClick={() => handleNavClick("How It Works")}
                 className="text-gray-700 hover:text-primary transition-colors font-medium text-left"
+                aria-label="Learn how it works"
               >
                 How It Works
               </Link>
@@ -117,6 +121,7 @@ const Header = () => {
                 to="/pricing"
                 onClick={() => handleNavClick("Pricing")}
                 className="text-gray-700 hover:text-primary transition-colors font-medium text-left"
+                aria-label="View pricing"
               >
                 Pricing
               </Link>
@@ -124,15 +129,18 @@ const Header = () => {
                 to="/contact"
                 onClick={() => handleNavClick("Contact")}
                 className="text-gray-700 hover:text-primary transition-colors font-medium text-left"
+                aria-label="Contact us"
               >
                 Contact
               </Link>
-              <Button
-                onClick={handleCTA}
-                className="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-colors mt-4 w-full"
-              >
-                Request Demo
-              </Button>
+              <Link to="/contact">
+                <Button
+                  className="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-colors mt-4 w-full"
+                  aria-label="Request demo"
+                >
+                  Request Demo
+                </Button>
+              </Link>
             </nav>
           </div>
         )}

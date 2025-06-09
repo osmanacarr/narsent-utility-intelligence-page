@@ -1,12 +1,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
-  const handleJoinWaitlist = () => {
-    console.log("Join waitlist clicked");
-  };
-
   const handleSeeHowItWorks = () => {
     console.log("See how it works clicked");
   };
@@ -48,23 +45,27 @@ const HeroSection = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                onClick={handleJoinWaitlist}
-                size="lg"
-                className="bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group"
-              >
-                Join the Waitlist
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                onClick={handleSeeHowItWorks}
-                variant="outline"
-                size="lg"
-                className="px-8 py-4 rounded-lg font-semibold border-2 border-gray-300 hover:border-primary hover:text-primary transition-all duration-300 group"
-              >
-                <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                See How It Works
-              </Button>
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group"
+                  aria-label="Join the waitlist"
+                >
+                  Join the Waitlist
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link to="/how-it-works">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-4 rounded-lg font-semibold border-2 border-gray-300 hover:border-primary hover:text-primary transition-all duration-300 group"
+                  aria-label="See how it works"
+                >
+                  <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  See How It Works
+                </Button>
+              </Link>
             </div>
 
             {/* Vision Statement */}

@@ -1,9 +1,10 @@
 
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -70,16 +71,51 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
               <ul className="space-y-3">
-                {["Product", "How It Works", "Platform Vision", "Partners", "Contact"].map((link) => (
-                  <li key={link}>
-                    <button
-                      onClick={() => handleContactClick(link)}
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      {link}
-                    </button>
-                  </li>
-                ))}
+                <li>
+                  <Link
+                    to="/product"
+                    className="text-gray-300 hover:text-white transition-colors"
+                    aria-label="View product overview"
+                  >
+                    Product
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/how-it-works"
+                    className="text-gray-300 hover:text-white transition-colors"
+                    aria-label="Learn how it works"
+                  >
+                    How It Works
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/product"
+                    className="text-gray-300 hover:text-white transition-colors"
+                    aria-label="View platform vision"
+                  >
+                    Platform Vision
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contact"
+                    className="text-gray-300 hover:text-white transition-colors"
+                    aria-label="Partner with us"
+                  >
+                    Partners
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contact"
+                    className="text-gray-300 hover:text-white transition-colors"
+                    aria-label="Contact us"
+                  >
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -98,12 +134,15 @@ const Footer = () => {
                   className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
                   required
                 />
-                <Button 
-                  type="submit" 
-                  className="w-full bg-primary hover:bg-blue-600"
-                >
-                  Join Waitlist
-                </Button>
+                <Link to="/contact">
+                  <Button 
+                    type="button" 
+                    className="w-full bg-primary hover:bg-blue-600"
+                    aria-label="Join waitlist"
+                  >
+                    Join Waitlist
+                  </Button>
+                </Link>
               </form>
             </div>
           </div>
@@ -141,24 +180,24 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              <button
-                onClick={() => handleContactClick("LinkedIn")}
+              <a
+                href="https://www.linkedin.com/company/narsent/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                aria-label="Visit our LinkedIn page"
               >
                 <Linkedin className="w-4 h-4" />
-              </button>
-              <button
-                onClick={() => handleContactClick("Twitter")}
+              </a>
+              <a
+                href="https://www.instagram.com/narsent.co/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                aria-label="Visit our Instagram page"
               >
-                <Twitter className="w-4 h-4" />
-              </button>
-              <button
-                onClick={() => handleContactClick("GitHub")}
-                className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                <Github className="w-4 h-4" />
-              </button>
+                <Instagram className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
