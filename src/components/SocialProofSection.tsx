@@ -1,5 +1,5 @@
 
-import { Award, TrendingUp, Users, MapPin } from "lucide-react";
+import { Award, Users, MapPin, Target } from "lucide-react";
 
 const SocialProofSection = () => {
   const backers = [
@@ -8,11 +8,11 @@ const SocialProofSection = () => {
     { name: "Teknopark İzmir", logo: "TI" },
   ];
 
-  const stats = [
-    { icon: Users, value: "50+", label: "Utility Companies", color: "text-blue-600" },
-    { icon: TrendingUp, value: "€2.5M+", label: "Recovered Revenue", color: "text-green-600" },
-    { icon: Award, value: "94%", label: "Prediction Accuracy", color: "text-purple-600" },
-    { icon: MapPin, value: "3", label: "Countries", color: "text-orange-600" },
+  const goals = [
+    { icon: Users, value: "Phase 1", label: "Partner Utilities", color: "text-blue-600" },
+    { icon: Target, value: "R&D", label: "Current Focus", color: "text-green-600" },
+    { icon: Award, value: "AI-First", label: "Architecture", color: "text-purple-600" },
+    { icon: MapPin, value: "Türkiye", label: "Starting Market", color: "text-orange-600" },
   ];
 
   return (
@@ -20,17 +20,17 @@ const SocialProofSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Trusted by Industry Leaders
+            Backed by Leading Innovation Partners
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Join the growing community of utility companies transforming their operations with AI
+            Building the future of utility AI with Turkey's top technology ecosystem
           </p>
         </div>
 
-        {/* Stats Grid */}
+        {/* R&D Goals Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => {
-            const Icon = stat.icon;
+          {goals.map((goal, index) => {
+            const Icon = goal.icon;
             return (
               <div
                 key={index}
@@ -39,13 +39,13 @@ const SocialProofSection = () => {
               >
                 <div className="relative mb-4">
                   <div className={`w-16 h-16 mx-auto rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors`}>
-                    <Icon className={`w-8 h-8 ${stat.color}`} />
+                    <Icon className={`w-8 h-8 ${goal.color}`} />
                   </div>
                 </div>
-                <div className={`text-3xl font-bold ${stat.color} mb-2 group-hover:scale-110 transition-transform`}>
-                  {stat.value}
+                <div className={`text-2xl font-bold ${goal.color} mb-2 group-hover:scale-110 transition-transform`}>
+                  {goal.value}
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-gray-600 font-medium">{goal.label}</div>
               </div>
             );
           })}
@@ -55,10 +55,10 @@ const SocialProofSection = () => {
         <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 animate-slide-in-right">
           <div className="text-center mb-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              Backed by Leading Innovation Partners
+              Supported by Turkey's Innovation Ecosystem
             </h3>
             <p className="text-gray-600">
-              Supported by Turkey's top technology incubators and accelerators
+              Backed by leading technology incubators and accelerators in Turkey
             </p>
           </div>
 
@@ -77,14 +77,14 @@ const SocialProofSection = () => {
             ))}
           </div>
 
-          {/* Testimonial Quote */}
+          {/* Vision Quote */}
           <div className="mt-8 text-center">
             <blockquote className="text-lg text-gray-700 italic max-w-2xl mx-auto">
-              "narsent represents the future of utility operations - where AI meets practical business outcomes. 
-              Their approach to debt intelligence is revolutionary."
+              "narsent represents the next evolution in utility operations – where AI transforms reactive systems 
+              into predictive, intelligent infrastructure."
             </blockquote>
             <div className="mt-4 text-sm text-gray-500">
-              - Innovation Partner Review
+              - Vision Statement, R&D Phase
             </div>
           </div>
         </div>

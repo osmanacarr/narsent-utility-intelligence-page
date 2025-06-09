@@ -14,7 +14,7 @@ const Footer = () => {
     console.log("Newsletter signup:", email);
     toast({
       title: "Success!",
-      description: "Thank you for subscribing to our newsletter.",
+      description: "You're now on our R&D updates list.",
     });
     setEmail("");
   };
@@ -40,8 +40,8 @@ const Footer = () => {
                   className="h-8 w-auto mb-4 brightness-0 invert"
                 />
                 <p className="text-gray-300 leading-relaxed max-w-md">
-                  AI-powered analytics and orchestration platform for utility companies. 
-                  Transform your debt collection strategy with intelligent automation.
+                  AI-powered decision & insight infrastructure for regulated industries. 
+                  Currently in R&D phase, building the future of utility intelligence.
                 </p>
               </div>
 
@@ -58,19 +58,9 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-primary" />
-                  <a 
-                    href="tel:+902121234567" 
-                    className="text-gray-300 hover:text-white transition-colors"
-                    onClick={() => handleContactClick("phone")}
-                  >
-                    +90 (212) 123 45 67
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-primary" />
                   <span className="text-gray-300">
-                    İstanbul, Turkey
+                    İzmir, Türkiye
                   </span>
                 </div>
               </div>
@@ -80,7 +70,7 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
               <ul className="space-y-3">
-                {["Product", "How It Works", "Pricing", "Case Studies", "Contact"].map((link) => (
+                {["Product", "How It Works", "Platform Vision", "Partners", "Contact"].map((link) => (
                   <li key={link}>
                     <button
                       onClick={() => handleContactClick(link)}
@@ -93,11 +83,11 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Newsletter */}
+            {/* Newsletter - R&D Updates */}
             <div>
-              <h3 className="text-lg font-semibold mb-6">Stay Updated</h3>
+              <h3 className="text-lg font-semibold mb-6">R&D Updates</h3>
               <p className="text-gray-300 mb-4">
-                Get the latest insights on utility AI and debt intelligence.
+                Get the latest on debt intelligence & strategic AI development.
               </p>
               <form onSubmit={handleNewsletterSignup} className="space-y-3">
                 <Input
@@ -112,7 +102,7 @@ const Footer = () => {
                   type="submit" 
                   className="w-full bg-primary hover:bg-blue-600"
                 >
-                  Subscribe
+                  Join Waitlist
                 </Button>
               </form>
             </div>
@@ -124,7 +114,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-gray-400 text-sm">
-              © {currentYear} narsent. All rights reserved.
+              © {currentYear} narsent. All rights reserved. Currently in R&D phase.
             </div>
 
             {/* Legal Links */}

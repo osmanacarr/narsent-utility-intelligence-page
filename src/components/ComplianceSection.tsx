@@ -6,21 +6,21 @@ const ComplianceSection = () => {
   const complianceItems = [
     {
       id: "kvkk",
-      title: "KVKK Compliance",
-      description: "Full compliance with Turkey's Personal Data Protection Law (KVKK). Our platform ensures all customer data is processed according to legal requirements.",
-      details: "We implement data minimization, purpose limitation, and consent management to ensure full KVKK compliance."
+      title: "KVKK Alignment",
+      description: "Designed with Turkey's Personal Data Protection Law (KVKK) requirements in mind. Our architecture ensures data processing compliance from day one.",
+      details: "Built-in data minimization, purpose limitation, and consent management frameworks ready for KVKK compliance."
     },
     {
       id: "gdpr",
-      title: "GDPR Ready",
-      description: "European General Data Protection Regulation compliant for international operations and data transfers.",
-      details: "Built-in privacy by design, data subject rights management, and cross-border data transfer safeguards."
+      title: "GDPR Ready Architecture",
+      description: "European General Data Protection Regulation compliant design for international operations and data transfers.",
+      details: "Privacy by design principles, data subject rights management, and cross-border data transfer safeguards integrated into our platform architecture."
     },
     {
       id: "epdk",
-      title: "EPDK Certified",
-      description: "Approved by Turkey's Energy Market Regulatory Authority for utility sector operations and data handling.",
-      details: "Certified processes for energy sector data handling, customer protection, and regulatory reporting."
+      title: "EPDK-Driven Architecture",
+      description: "Platform designed for Turkey's Energy Market Regulatory Authority requirements and utility sector compliance needs.",
+      details: "Specialized processes for energy sector data handling, customer protection requirements, and regulatory reporting capabilities."
     }
   ];
 
@@ -32,11 +32,11 @@ const ComplianceSection = () => {
             <div className="flex items-center justify-center mb-4">
               <Shield className="w-12 h-12 text-primary mr-3" />
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                Built for Compliance-First Sectors
+                Designed with KVKK & GDPR Alignment
               </h2>
             </div>
             <p className="text-xl text-gray-600">
-              Enterprise-grade security and compliance for the utility industry
+              Ready for EPDK-driven architecture and compliance-first sectors
             </p>
           </div>
 
@@ -46,19 +46,19 @@ const ComplianceSection = () => {
               <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-3 group-hover:shadow-xl transition-shadow">
                 <span className="text-2xl font-bold text-primary">K</span>
               </div>
-              <div className="text-sm font-medium text-gray-700">KVKK</div>
+              <div className="text-sm font-medium text-gray-700">KVKK Ready</div>
             </div>
             <div className="text-center group">
               <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-3 group-hover:shadow-xl transition-shadow">
                 <span className="text-2xl font-bold text-primary">G</span>
               </div>
-              <div className="text-sm font-medium text-gray-700">GDPR</div>
+              <div className="text-sm font-medium text-gray-700">GDPR Ready</div>
             </div>
             <div className="text-center group">
               <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-3 group-hover:shadow-xl transition-shadow">
                 <span className="text-2xl font-bold text-primary">E</span>
               </div>
-              <div className="text-sm font-medium text-gray-700">EPDK</div>
+              <div className="text-sm font-medium text-gray-700">EPDK Aligned</div>
             </div>
           </div>
 
@@ -91,17 +91,17 @@ const ComplianceSection = () => {
             <div className="text-center animate-fade-in">
               <Lock className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="font-semibold text-gray-900 mb-2">End-to-End Encryption</h3>
-              <p className="text-sm text-gray-600">All data encrypted in transit and at rest</p>
+              <p className="text-sm text-gray-600">All data encrypted in transit and at rest (planned)</p>
             </div>
             <div className="text-center animate-fade-in" style={{ animationDelay: '200ms' }}>
               <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold text-gray-900 mb-2">SOC 2 Type II</h3>
-              <p className="text-sm text-gray-600">Independently audited security controls</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Security Framework</h3>
+              <p className="text-sm text-gray-600">Enterprise-grade security controls (in development)</p>
             </div>
             <div className="text-center animate-fade-in" style={{ animationDelay: '400ms' }}>
               <CheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold text-gray-900 mb-2">ISO 27001</h3>
-              <p className="text-sm text-gray-600">Information security management certified</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Compliance Framework</h3>
+              <p className="text-sm text-gray-600">Information security management (roadmap)</p>
             </div>
           </div>
         </div>
